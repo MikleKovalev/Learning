@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Learning</string>
+    <string name="app_name">Todo List</string>
+    <string name="hello_world">Hello, World!</string>
 </resources>
