@@ -1,11 +1,11 @@
 package com.space.learning.domain
 
-import java.util.Date
+import java.time.LocalDateTime
 
 data class TodoItem(
     val header: String,
     val content: String,
-    val createdAt: Date,
+    val createdAt: LocalDateTime,
     val done: Boolean,
     var id: Int = UNDEFINED_ID
 ) {
