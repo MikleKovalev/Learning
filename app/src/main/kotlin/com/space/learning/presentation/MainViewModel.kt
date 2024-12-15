@@ -20,4 +20,10 @@ class MainViewModel: ViewModel() {
         val list = getTodos.getTodos()
         todos.postValue(list)
     }
+
+    fun deleteTodo(todoItem: TodoItem) {
+        deleteTodos.delete(todoItem)
+        val list = getTodos.getTodos()
+        todos.postValue(list)
+    }
 }

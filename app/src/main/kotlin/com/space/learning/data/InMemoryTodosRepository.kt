@@ -4,20 +4,20 @@ import com.space.learning.domain.TodoItem
 import com.space.learning.domain.TodoRepository
 import java.lang.RuntimeException
 import java.time.LocalDateTime
-import java.util.Date
 
 object InMemoryTodosRepository: TodoRepository {
     private val todos = mutableMapOf<Int, TodoItem>()
     private var autoIncrementId = 0
 
     init {
-        repeat(20) {
+        repeat(200) {
             add(
                 TodoItem(
-                "Task $it",
-                "Task $it description",
-                LocalDateTime.now(),
-                    false)
+                    "Task $it",
+                    "Task $it description",
+                    LocalDateTime.now(),
+                    false
+                )
             )
         }
     }
