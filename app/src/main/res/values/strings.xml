@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Todo List</string>
     <string name="hello_world">Hello, World!</string>
+    <string name="title">Title</string>
+    <string name="content">Content</string>
+    <string name="save">Save</string>
 </resources>

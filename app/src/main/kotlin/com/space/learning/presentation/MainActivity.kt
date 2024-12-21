@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
         setupRecyclerView()
+        setupActionButton()
     }
 
     private fun setupRecyclerView() {
@@ -52,5 +53,9 @@ class MainActivity : AppCompatActivity() {
         val itemTouchHelper = ItemTouchHelper(callback)
         itemTouchHelper.attachToRecyclerView(binding.todosRecyclerView)
         viewModel.getTodos()
+    }
+
+    private fun setupActionButton() {
+
     }
 }

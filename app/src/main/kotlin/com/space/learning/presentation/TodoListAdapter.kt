@@ -1,6 +1,5 @@
 package com.space.learning.presentation
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
@@ -9,7 +8,6 @@ import com.space.learning.databinding.TodoItemBinding
 import com.space.learning.domain.TodoItem
 
 class TodoListAdapter : ListAdapter<TodoItem, TodoListAdapter.TodoViewHolder>(TodoItemDiffCallback()) {
-    var count = 0
     var onTodoLongClickListener: ((TodoItem) -> Unit)? = null
 
     class TodoViewHolder(
@@ -31,7 +29,6 @@ class TodoListAdapter : ListAdapter<TodoItem, TodoListAdapter.TodoViewHolder>(To
             parent,
             false
         )
-        Log.d("CREATE NEW VIEW", "${++count}")
         return TodoViewHolder(binding)
     }
 
