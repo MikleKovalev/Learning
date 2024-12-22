@@ -5,6 +5,7 @@ import com.space.learning.data.InMemoryTodosRepository
 import com.space.learning.domain.AddTodoUseCase
 import com.space.learning.domain.EditTodoUseCase
 import com.space.learning.domain.GetTodoByIdUseCase
+import com.space.learning.domain.TodoItem
 
 class TodoViewModel: ViewModel() {
     private val repository = InMemoryTodosRepository
@@ -12,5 +13,7 @@ class TodoViewModel: ViewModel() {
     private val editTodo = EditTodoUseCase(repository)
     private val addTodo = AddTodoUseCase(repository)
 
-
+    fun getTodoById(todoId: Int): TodoItem {
+        return getTodo.getTodoById(todoId)
+    }
 }

@@ -31,7 +31,8 @@ class MainActivity : AppCompatActivity() {
             todosAdapter.submitList(it)
         }
         todosAdapter.onTodoLongClickListener = {
-
+            val intent = TodoActivity.newIntentEditTodo(this, it.id)
+            startActivity(intent)
         }
         val callback = object : ItemTouchHelper.SimpleCallback(
             0,
@@ -56,6 +57,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupActionButton() {
-
+        binding.addTodoButton.setOnClickListener {
+            val intent = TodoActivity.newIntentAddTodo(this)
+            startActivity(intent)
+        }
     }
 }
